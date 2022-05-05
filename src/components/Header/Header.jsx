@@ -14,6 +14,7 @@ const Header = () => {
             </div>
             <div className='button'>
                 <button className='button__item'>UPLOAD</button>
+                <img src={icon} className='search__icon--tablet' alt="" />
             </div>
         </div>
     );
