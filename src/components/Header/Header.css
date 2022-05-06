@@ -1,0 +1,158 @@
+body {
+  font-family: "AvenirNext LT Pro", serif;
+}
+
+.header {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header {
+    -moz-column-gap: 16px;
+         column-gap: 16px;
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+  height: 25px;
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    flex: 33;
+    justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .logo {
+    flex: 50;
+  }
+}
+@media screen and (min-width: 768px) {
+  .logo__image {
+    padding-left: 24px;
+  }
+}
+
+.search {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .search {
+    flex: 25;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .search {
+    flex: 20;
+  }
+}
+.search__input {
+  width: 85%;
+  padding: 12px;
+  border-radius: 4px;
+  border-color: #e1e1e1;
+  border-style: solid;
+  border-width: 1px;
+  text-indent: 25px;
+  background-color: #fafafa;
+  background-image: url("../../assets/Icons/search.svg");
+  background-repeat: no-repeat;
+  background-position: 10px;
+}
+@media screen and (min-width: 768px) {
+  .search__input {
+    width: 95%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .search__input {
+    width: 100%;
+  }
+}
+.search__input:focus {
+  outline: none;
+  border-width: 2px;
+  border-color: #0095ff;
+}
+.search__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+@media screen and (min-width: 768px) {
+  .search__icon {
+    display: none;
+  }
+}
+.search__icon--tablet {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .search__icon--tablet {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+}
+
+.button {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .button {
+    display: flex;
+    flex: 33;
+    justify-content: space-around;
+    padding-left: 10px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .button {
+    flex: 28;
+    justify-content: flex-start;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+  }
+}
+.button__item {
+  font-family: "AvenirNext LT Pro", serif;
+  font-size: 12px;
+  font-weight: 600;
+  width: 100%;
+  height: 45px;
+  color: white;
+  border: 1px solid;
+  border-color: #e1e1e1;
+  border-radius: 4px;
+  background-color: #0095ff;
+  background-image: url("../../assets/Icons/upload.svg");
+  background-repeat: no-repeat;
+  background-position: 10px;
+}
+@media screen and (min-width: 768px) {
+  .button__item {
+    width: 65%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .button__item {
+    width: 48%;
+  }
+}
+.button__item:hover {
+  background-color: #0065ad;
+}/*# sourceMappingURL=Header.css.map */
