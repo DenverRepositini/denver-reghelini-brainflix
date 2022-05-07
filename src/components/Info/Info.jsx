@@ -2,45 +2,64 @@ import './Info.scss'
 import data from '../../Data/video-details.json'
 import views from '../../assets/Icons/views.svg'
 import likes from '../../assets/Icons/likes.svg'
+import moment from 'moment'
 
 
-let today = new Date(data[0].timestamp);
+// let today = new Date(data[0].timestamp);
 
-let month = today.getMonth() + 1;
-let year = today.getFullYear();
-let date = today.getDate();
+// let month = today.getMonth() + 1;
+// let year = today.getFullYear();
+// let date = today.getDate();
 
-const Info = () => {
+
+
+
+const Info= () => {
+    return(
+        <section>
+            {data.map(details => (
+                <VideoInfo
+                title={details.title}
+                channel={details.channel}
+                date={details.timestamp}
+                views={details.views}
+                likes={details.likes}
+                description={details.description}
+                comments={details.comments}
+                 />
+
+
+                 ))}
+        </section>
+    )
+}
+
+
+const VideoInfo = (props) => {
     return (
-        <div>
-            <div>
-                    {data[0].title}
+        <div className='video-info'>
+            <div className='title'>
+                {props.title}
             </div>
-            <div>
-                <div>
-                    <p>
-                        {data[0].channel}
-                    </p>
-                    <p>
-                        {month + '/' + date + '/' + year}
-                    </p>
+            <div className='info' >
+                <div className='info__channel'>
+                    <p>By {props.channel} </p>
+                    <p>{moment(props.date).format('MM/DD/ YYYY')}</p>
                 </div>
-                <div>
-                    <p>
-                        <img src={views} alt="" />{data[0].views}
-                    </p> 
-                    <p>
-                        <img src={likes} alt="" />{data[0].likes}
-                    </p>
+                <div className='info__views' >
+                    <p><img src={views} alt="" />{props.views}</p> 
+                    <p><img src={likes} alt="" />{props.likes}</p>
                 </div>
             </div>
-            <div>
-                <p>
-                  {data[0].description}
-                 </p>
+            <div className='description'>
+                <p>{props.description}</p>
+            </div>
+            <div className='comments'>
+                {props.comments.length} Comments
             </div>
         </div>
     );
 }
+
 
 export default Info;
