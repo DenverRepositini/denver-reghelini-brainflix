@@ -1,11 +1,11 @@
+import React from 'react';
 import './App.scss';
 import Header from './components/Header/Header';
 import Video from './components/Video/Video';
 import Info from './components/Info/Info'
-import VideoList from './components/VideoList/Comments'
+import Comments  from './components/Comments/Comments';
 import videoDetailsJson from './Data/video-details.json'
 import videosJson from './Data/videos.json'
-import React from 'react';
 
 class App extends React.Component {
   constructor(){
@@ -18,12 +18,12 @@ class App extends React.Component {
   
 
 render(){
-  // console.log(sideBar)
   return (
     <div className="App">
       <Header />
       <Video poster={this.state.details.image} />
       <Info videoDescription={this.state.details} />
+      <Comments commentsList={this.state.details.comments} />
       <div>
           {videosJson.map((video,index) =>  { 
                 if (index !== this.state.selectedVideoIndex) {
