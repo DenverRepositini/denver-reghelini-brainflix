@@ -1,8 +1,8 @@
 import './Info.scss'
+
 import data from '../../Data/video-details.json'
 import views from '../../assets/Icons/views.svg'
 import likes from '../../assets/Icons/likes.svg'
-import moment from 'moment'
 
 
 // let today = new Date(data[0].timestamp);
@@ -11,13 +11,13 @@ import moment from 'moment'
 // let year = today.getFullYear();
 // let date = today.getDate();
 
+const Info= (props) => { 
 
+    const details = props.videoDescription
 
-
-const Info= () => {
     return(
         <section>
-            {data.map(details => (
+            {/* {data.map(details => ( */}
                 <VideoInfo
                 title={details.title}
                 channel={details.channel}
@@ -27,15 +27,22 @@ const Info= () => {
                 description={details.description}
                 comments={details.comments}
                  />
-
-
-                 ))}
+                 
         </section>
     )
 }
 
 
 const VideoInfo = (props) => {
+
+    let today = new Date(props.date);
+
+    let month = today.getMonth() + 1;
+    let year = today.getFullYear();
+    let day = today.getDate();
+
+    let formattedDate = month + '/' + day + '/' + year
+
     return (
         <div className='video-info'>
             <div className='title'>
@@ -44,7 +51,7 @@ const VideoInfo = (props) => {
             <div className='info' >
                 <div className='info__channel'>
                     <p>By {props.channel} </p>
-                    <p>{moment(props.date).format('MM/DD/ YYYY')}</p>
+                    <p>{formattedDate}</p>
                 </div>
                 <div className='info__views' >
                     <p><img src={views} alt="" />{props.views}</p> 
