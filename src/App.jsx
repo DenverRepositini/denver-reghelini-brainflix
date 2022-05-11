@@ -2,7 +2,7 @@ import './App.scss';
 import Header from './components/Header/Header';
 import Video from './components/Video/Video';
 import Info from './components/Info/Info'
-import VideoList from './components/VideoList/VideoList'
+import VideoList from './components/VideoList/Comments'
 import videoDetailsJson from './Data/video-details.json'
 import videosJson from './Data/videos.json'
 import React from 'react';

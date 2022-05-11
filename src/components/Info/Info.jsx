@@ -17,7 +17,6 @@ const Info= (props) => {
 
     return(
         <section>
-            {/* {data.map(details => ( */}
                 <VideoInfo
                 title={details.title}
                 channel={details.channel}
