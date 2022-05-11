@@ -1,0 +1,18 @@
+p{
+    margin: 0;
+}
+
+.video-info{
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+}
+
+.info{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 50px;
+    column-gap: 70px;
+    border-top: 2px solid ;
+    border-bottom: 2px solid;
+}

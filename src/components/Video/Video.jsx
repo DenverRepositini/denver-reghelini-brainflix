@@ -2,13 +2,13 @@ import './Video.scss'
 import data from '../../Data/video-details.json'
 
 
-const Video = () => {
+const Video = (props) => {
     return (
-        <div>
+        <>
             <div className='container'>
-                <video className='media' poster={data[0].image} controls src=""></video>               
+                <video className='media' poster={props.poster} controls src=""></video>               
             </div> 
-        </div>
+        </>
     );
 }
 
