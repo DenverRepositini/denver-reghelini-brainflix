@@ -22,8 +22,11 @@ render(){
     <div className="App">
       <Header />
       <Video poster={this.state.details.image} />
-      <Info videoDescription={this.state.details} />
-      <Comments commentsList={this.state.details.comments} />
+      <div>
+        <Info videoDescription={this.state.details} />
+        <Comments commentsList={this.state.details.comments} />
+      </div>
+     
       <div>
           {videosJson.map((video,index) =>  { 
                 if (index !== this.state.selectedVideoIndex) {

@@ -1,25 +1,38 @@
 import './Comments.scss'
+import likes from '../../assets/Icons/likes.svg'
+
 
 const Comments = (props) => {
     return (
         <>
-            <ul>
+            <div>
+                Comment form
+            </div>
+            <ul className='comments-list'>
                 {props.commentsList.map(comments => {
+                    let today = new Date(comments.timestamp);
+
+                    let month = today.getMonth() + 1;
+                    let year = today.getFullYear();
+                    let day = today.getDate();
+                
+                    let formattedDate = month + '/' + day + '/' + year
+
                     return (
                     <li key={comments.id} className="comments-list__item">
                         <div className='comments-list__image'></div>
                         <div className="comments-list__box">
                             <div className="comments-list__flex">
                                 <p className="comments-list__name">{comments.name}</p>
-                                <p className="comments-list__time">{comments.timestamp}</p>
+                                <p className="comments-list__time">{formattedDate}</p>
                             </div>
                             <p className="comments-list__text"> {comments.comment} </p>
                             <div className="comments-list__edit">
                                 <div className="like-section">
-                                    <img src="./Assets/icons/icon-like.svg" className="like-icon" />
+                                    <img src={likes} className="like-icon" />
                                     <p className="like-counter">0</p>
                                 </div>
-                                <img src="./Assets/icons/icon-delete.svg" className="delete" />
+                                {/* <img src="./Assets/icons/icon-delete.svg" className="delete" /> */}
                             </div>
                         </div>
                     </li>

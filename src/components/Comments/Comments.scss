@@ -2,15 +2,15 @@
 
 
 .comments {
-    padding: 1.375rem;
+    padding-top: 1.375rem;
 
-    @include tablet {
-          padding: 1.375rem 6.25rem;
-    }
+    // @include tablet {
+    //       padding: 1.375rem 6.25rem;
+    // }
 
-    @include desktop {
-        padding: 1.375rem 23.75rem;
-    }
+    // @include desktop {
+    //     padding: 1.375rem 23.75rem;
+    // }
   
 }
 
