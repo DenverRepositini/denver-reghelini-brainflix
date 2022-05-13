@@ -3,6 +3,7 @@ import './App.scss';
 import Header from './components/Header/Header';
 import Video from './components/Video/Video';
 import Info from './components/Info/Info'
+import NewComment from './components/NewComment/NewComment';
 import Comments  from './components/Comments/Comments';
 import videoDetailsJson from './Data/video-details.json'
 import videosJson from './Data/videos.json'
@@ -24,6 +25,7 @@ render(){
       <Video poster={this.state.details.image} />
       <div>
         <Info videoDescription={this.state.details} />
+        <NewComment />
         <Comments commentsList={this.state.details.comments} />
       </div>
      

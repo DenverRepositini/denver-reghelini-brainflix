@@ -2,12 +2,10 @@ import './Comments.scss'
 import likes from '../../assets/Icons/likes.svg'
 
 
+
 const Comments = (props) => {
     return (
         <>
-            <div>
-                Comment form
-            </div>
             <ul className='comments-list'>
                 {props.commentsList.map(comments => {
                     let today = new Date(comments.timestamp);
