@@ -48,17 +48,17 @@ const VideoInfo = (props) => {
                 {props.title}
             </div>
             <div className='info' >
-                <div className='info__channel'>
-                    <p>By {props.channel} </p>
+                <div className='info__item'>
+                    <p className='info__item--bold'>By {props.channel} </p>
                     <p>{formattedDate}</p>
                 </div>
-                <div className='info__views' >
-                    <p><img src={views} alt="" />{props.views}</p> 
-                    <p><img src={likes} alt="" />{props.likes}</p>
+                <div className='info__item' >
+                    <p><img src={views} className='info__item__image' alt="views icon" />{props.views}</p> 
+                    <p><img src={likes} className='info__item__image' alt="like icon" />{props.likes}</p>
                 </div>
             </div>
             <div className='description'>
-                <p>{props.description}</p>
+                <p className='description__text'>{props.description}</p>
             </div>
             <div className='comments'>
                 {props.comments.length} Comments

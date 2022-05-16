@@ -1,3 +1,5 @@
+@use '../../styles/partials/media' as *;
+
 p{
     margin: 0;
 }
@@ -9,14 +11,70 @@ p{
 }
 
 .title{
-    font-size: 36px;
+    font-size: 33px;
+    font-weight: 600;
+    line-height: 44px;
+    padding: 16px 0;
 }
 
 .info{
     display: flex;
     justify-content: flex-start;
-    padding-left: 50px;
-    column-gap: 70px;
+    padding: 24px 0;
+    column-gap: 120px;
     border-top: 2px solid ;
     border-bottom: 2px solid;
+    border-color: #e1e1e1;
+
+    @include tablet {
+        justify-content: space-between;
+    }
+
+    &__item{
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        color: $primary-silver;
+        font-size: 20px;
+
+        @include tablet {
+            flex-direction: row;
+            column-gap: 24px;
+            font-size: 16px;
+        }
+
+        &__image{
+            padding-right: 10px;
+        }
+
+        &--bold{
+            color: $primary-black;
+         
+            font-weight: 600;
+
+            @include tablet{
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.description{
+    padding: 20px 0;
+    
+
+    &__text{
+        padding-right: 20px;
+        line-height: 22px;
+        font-size: 18px;
+
+        @include tablet{
+            line-height: 26px;
+        }
+    }
+}
+
+.comments{
+    font-size: 20px;
+    font-weight: 600;
 }

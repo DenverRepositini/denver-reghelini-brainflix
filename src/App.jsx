@@ -29,14 +29,20 @@ render(){
         <Comments commentsList={this.state.details.comments} />
       </div>
      
-      <div>
+      <div className='list'>
+          <h3 className='list__title'>NEXT VIDEOS</h3>
           {videosJson.map((video,index) =>  { 
                 if (index !== this.state.selectedVideoIndex) {
                     return (
-                      <div key={video.id} onClick={()=> this.setState({details:videoDetailsJson[index], selectedVideoIndex: index})}>
-                        <p>{video.channel}</p>
-                        <img className='list-image' src={video.image} alt={video.title} />
-                        <p >{video.title}</p>
+                      <div className='list__item' key={video.id} onClick={()=> this.setState({details:videoDetailsJson[index], selectedVideoIndex: index})}>
+                        <div className='list__image'>
+                           <img className='list__image__item' src={video.image} alt={video.title} />
+                        </div>
+                        <div className='list__item__info'>
+                          <p className='list__item__info--bold'>{video.title}</p>
+                          <p>{video.channel}</p>
+                        </div>
+                        
                       </div>
                     )
                 }}

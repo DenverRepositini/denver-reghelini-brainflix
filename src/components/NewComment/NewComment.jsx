@@ -5,15 +5,15 @@ const NewComment = () => {
     return (
         <>
             <div className='form'>
-                <div>
-                     <img src={pic} className="form__image"  alt="Mohan Muruge" />
+                <div className='form__box1' >
+                     <img src={pic} className="form__box1__image"  alt="Mohan Muruge" />
                 </div>
-                <div>
-                    <div>
+                <div className='form__box2' >
+                    <div className='form__box2__input'>
                         <label className='input-label' htmlFor="comment">JOIN THE CONVERSATION</label>
                         <input id='comment' type="text" className='input-box' placeholder=' Add a new comment' />
                     </div>
-                    <div>
+                    <div className='form__box2__button'>
                         <button className='input-button'>COMMENT</button>
                     </div>
                 </div>
