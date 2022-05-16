@@ -14,7 +14,7 @@ const NewComment = () => {
                         <input id='comment' type="text" className='input-box' placeholder=' Add a new comment' />
                     </div>
                     <div>
-                        <button className='button'>COMMENT</button>
+                        <button className='input-button'>COMMENT</button>
                     </div>
                 </div>
             </div>
