@@ -1,0 +1,2 @@
+import './Upload.scss'
+
