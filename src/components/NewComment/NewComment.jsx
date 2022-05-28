@@ -1,3 +1,4 @@
+import React from 'react'
 import './NewComment.scss'
 import pic from  '../../assets/Images/Mohan-muruge.jpg';
 

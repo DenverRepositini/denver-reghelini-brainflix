@@ -6,6 +6,11 @@
     padding: 0 24px;
     border-top: .0625rem solid #e1e1e1;
 
+    @include desktop{
+        padding-right: 0;
+        margin-right: 16px;
+    }
+
     &__item {
         display: flex;
         border-bottom: .0625rem solid #e1e1e1;

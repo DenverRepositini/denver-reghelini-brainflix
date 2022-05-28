@@ -1,3 +1,4 @@
+import React from 'react'
 import './Comments.scss'
 import likes from '../../assets/Icons/likes.svg'
 

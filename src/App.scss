@@ -7,10 +7,27 @@ body{
     
 }
 
+.flex{
+    @include desktop {
+        display: flex;
+    }
+
+    &__info{
+        @include desktop{
+            flex: 7;
+            border-right: 2px solid #e1e1e1;
+        }
+    }
+}
+
 .list {
     display: flex;
     flex-direction: column;
     padding: 24px;
+
+    @include desktop{
+        flex: 3;
+    }
 
     &__title{
         color: $primary-silver;
@@ -24,6 +41,10 @@ body{
 
         @include tablet{
             padding-right: 380px;
+        }
+
+        @include desktop{
+            padding-right: 0;
         }
 
         &__info{

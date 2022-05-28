@@ -1,3 +1,4 @@
+import React from 'react'
 import './Video.scss'
 import data from '../../Data/video-details.json'
 

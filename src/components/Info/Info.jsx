@@ -1,5 +1,5 @@
+// import React from 'react'
 import './Info.scss'
-
 import data from '../../Data/video-details.json'
 import views from '../../assets/Icons/views.svg'
 import likes from '../../assets/Icons/likes.svg'

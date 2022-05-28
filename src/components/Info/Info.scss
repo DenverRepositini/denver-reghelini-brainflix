@@ -8,6 +8,10 @@ p{
     display: flex;
     flex-direction: column;
     padding: 24px;
+
+    @include desktop {
+        padding-right: 0;
+    }
 }
 
 .title{
@@ -30,6 +34,11 @@ p{
         justify-content: space-between;
     }
 
+    @include desktop {
+        border-top: none;
+        padding-top: 0;
+    }
+
     &__item{
         display: flex;
         flex-direction: column;
@@ -41,6 +50,10 @@ p{
             flex-direction: row;
             column-gap: 24px;
             font-size: 16px;
+        }
+
+        @include desktop {
+            margin-right: 16px;
         }
 
         &__image{
