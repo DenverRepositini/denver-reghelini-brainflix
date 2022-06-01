@@ -17,7 +17,7 @@ const Comments = (props) => {
                     let formattedDate = month + '/' + day + '/' + year
 
                     return (
-                    <li key={comments.id} className="comments-list__item">
+                    <li key={comments.name} className="comments-list__item">
                         <div className='comments-list__image'></div>
                         <div className="comments-list__box">
                             <div className="comments-list__flex">
