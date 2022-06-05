@@ -1,27 +1,37 @@
 import './VideoList.scss'
 import React from 'react';
 import { Link } from 'react-router-dom';
-import videoDetailsJson from '../../Data/video-details.json';
-import videosJson from '../../Data/videos.json';
+import axios from 'axios'
+
+const api_key = "bd5ac12a-c27e-4c98-9133-a8757f9395cd"
+const api_url= 'https://project-2-api.herokuapp.com'
 
 class VideoList extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-          details:videoDetailsJson[0],
-          selectedVideoIndex:0
+          details:[]
         }
       }  
+
+      componentDidMount() {
+        axios.get('https://project-2-api.herokuapp.com/videos?api_key=' + api_key)
+          .then(res=> {
+            this.setState({
+              details:res.data
+            })
+          })
+      }
     render(){
          return(
         <div className='list'>
         <h3 className='list__title'>NEXT VIDEOS</h3>
-        {videosJson.map((video) =>  { 
-              if (video.title !== this.props.routeId) {
+        {this.state.details.map((video) =>  { 
+              if (video.id !== this.props.routeId) {
                   return (
                     <div className='list__item' key={video.id}>
             
-                      <Link to= {`/${video.title}`} >
+                      <Link to= {`/${video.id}`} >
                       <div className='list__image'>
                          <img className='list__image__item' src={video.image} alt={video.title} />
                       </div>
