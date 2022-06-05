@@ -4,11 +4,9 @@ import { Link } from "react-router-dom"
 
 
 const Upload = (props) => {
-    console.log(props)
     const publishVideo = (e) => {
         e.preventDefault();
         alert('Video published');
-        // <Link to= '/'></Link>
         props.history.push('/')
     }
     
@@ -31,9 +29,7 @@ const Upload = (props) => {
                         <input id="commentBox" className="cta__form-input__box2" placeholder="  Add a description to your video"/>
                     </div>
                     <div className="cta__form-button">
-                        <Link className='cta__form-link' to='/'>
-                            <button onClick={publishVideo} type="submit" id="sendComment" className="cta__form-button__item">PUBLISH</button>
-                        </Link>
+                        <button onClick={publishVideo} type="submit" id="sendComment" className="cta__form-button__item">PUBLISH</button>
                     </div>       
                 </form>
             </div>

@@ -1,10 +1,5 @@
 import React from 'react';
 import Video from '../../components/Video/Video';
-import Info from '../../components/Info/Info';
-import NewComment from '../../components/NewComment/NewComment';
-import Comments  from '../../components/Comments/Comments';
-import VideoList from '../../components/VideoList/VideoList';
-// import this.state.details from '../../Data/video-details.json';
 import axios from 'axios'
 
 
@@ -35,17 +30,7 @@ class Homepage extends React.Component {
     render(){
         if (this.state.details !== null ) 
             return (
-                <div>
-                    <div className='container'>
-                        <video className='media' poster={this.state.details.image} controls src=""></video>               
-                    </div> 
-                    <div>
-                        <Info videoDescription={this.state.details} />
-                        <NewComment />
-                        <Comments commentsList={this.state.details.comments} />
-                        <VideoList routeId={this.state.details.id} />
-                    </div> 
-                </div>
+             <Video data={this.state.details} />           
             );
     }
    
