@@ -1,15 +1,8 @@
 // import React from 'react'
 import './Info.scss'
-import data from '../../Data/video-details.json'
 import views from '../../assets/Icons/views.svg'
 import likes from '../../assets/Icons/likes.svg'
 
-
-// let today = new Date(data[0].timestamp);
-
-// let month = today.getMonth() + 1;
-// let year = today.getFullYear();
-// let date = today.getDate();
 
 const Info= (props) => { 
 

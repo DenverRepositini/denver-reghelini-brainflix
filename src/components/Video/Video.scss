@@ -1,26 +1,18 @@
 @use '../../styles/partials/media' as *;
 
-body {
-    margin: 0;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    background-color: black;
-    width: 100%;
-    height: 35%;
-}
-
-.media{
-    width: 100%;
-    height: 100%;
-
-    @include tablet {
-        width: 90%;
+.video-details{
+    @include desktop{
+         display: flex;
+         padding: 0 120px;
     }
 
-    @include desktop {
-        width: 70%;
+    &__one{
+        flex: 7;
+        border-right: 2px solid #e1e1e1;
     }
+
+    &__two{
+        flex: 3;
+    }
+   
 }

@@ -18,7 +18,7 @@ const Comments = (props) => {
                     let formattedDate = month + '/' + day + '/' + year
 
                     return (
-                    <li key={comments.id} className="comments-list__item">
+                    <li key={comments.name} className="comments-list__item">
                         <div className='comments-list__image'></div>
                         <div className="comments-list__box">
                             <div className="comments-list__flex">
@@ -28,10 +28,9 @@ const Comments = (props) => {
                             <p className="comments-list__text"> {comments.comment} </p>
                             <div className="comments-list__edit">
                                 <div className="like-section">
-                                    <img src={likes} className="like-icon" />
-                                    <p className="like-counter">0</p>
+                                    {/* <img src={likes} className="like-icon" />
+                                    <p className="like-counter">0</p> */}
                                 </div>
-                                {/* <img src="./Assets/icons/icon-delete.svg" className="delete" /> */}
                             </div>
                         </div>
                     </li>

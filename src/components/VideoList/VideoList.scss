@@ -1,0 +1,49 @@
+@use '../../styles/partials/media' as *;
+
+.list {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+
+    @include desktop{
+        padding: 0;
+        padding-left: 24px;
+    }
+
+    &__title{
+        color: $primary-silver;
+        font-weight: 600;
+    }
+
+    &__item{
+        display: flex;
+        margin-bottom: 16px;
+        column-gap: 24px;
+
+        @include tablet{
+            padding-right: 380px;
+        }
+
+        @include desktop{
+            padding-right: 0;
+        }
+
+        &__info{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 18px;
+
+            &--bold{
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.list__image__item{
+    width: 145px;
+    height: 85px;
+    border-radius: 5px;
+    
+}

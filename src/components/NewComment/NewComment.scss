@@ -1,4 +1,4 @@
-@use '../../styles/partials/media' as *;
+@use '../../styles/partials/_media' as *;
 
 
 .form{
@@ -60,6 +60,13 @@
     width: 98%;
     padding: 0.375rem 0;
     margin-top: 5px;
+
+    
+    &:focus{
+        outline: none;
+        border-width: 2px;
+        border-color: $primary-blue;
+    }
 
     @include tablet {
         height: 2.5rem;

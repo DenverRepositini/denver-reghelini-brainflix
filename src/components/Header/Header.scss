@@ -16,6 +16,7 @@ body{
     }
 
     @include desktop{
+        padding: 20px 100px;
         column-gap: 16px;
     }
 }
@@ -36,10 +37,12 @@ body{
     }
 
     &__image{
+
         @include tablet {
             padding-left: 24px;
         }
     }
+
 }
 
 .search{
@@ -113,13 +116,17 @@ body{
         display: flex;
         flex: 33;
         justify-content: space-around;
-         padding-left: 10px;
+        padding-left: 10px;
     }
 
     @include desktop {
         flex: 28;
         justify-content: flex-start;
-        column-gap: 40px;
+    }
+
+    
+    &__link {
+        width: inherit;
     }
 
     &__item{
@@ -138,13 +145,8 @@ body{
         background-position: 10px;
 
         @include tablet{
-            width: 65%;
+            width: 80%;
         }
-
-        @include desktop {
-            width: 48%;
-        }
-
         
         &:hover{
             background-color: $hover;
