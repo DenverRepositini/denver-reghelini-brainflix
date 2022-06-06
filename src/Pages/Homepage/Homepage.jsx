@@ -13,7 +13,7 @@ class Homepage extends React.Component {
         this.state = {
           details:null
         }
-      }  
+    }  
 
     componentDidMount() {
          axios.get('https://project-2-api.herokuapp.com/videos?api_key=' + api_key)
@@ -22,16 +22,14 @@ class Homepage extends React.Component {
             .then(res => {
                 this.setState({
                     details:res.data
-                })
-            }).catch(err => console.log(err))
-          }).catch(err => console.log(err))
-      }
+                });
+            }).catch(err => console.log(err));
+          }).catch(err => console.log(err));
+    }
 
     render(){
-        if (this.state.details !== null ) 
-            return (
-             <Video data={this.state.details} />           
-            );
+        if (this.state.details !== null)
+            return <Video data={this.state.details} />
     }
    
 }

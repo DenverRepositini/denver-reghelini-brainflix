@@ -14,39 +14,39 @@ class VideoList extends React.Component {
         }
       }  
 
-      componentDidMount() {
+    componentDidMount() {
         axios.get('https://project-2-api.herokuapp.com/videos?api_key=' + api_key)
           .then(res=> {
             this.setState({
               details:res.data
-            })
+            });
           })
-      }
+    }
+
     render(){
-         return(
+      return(
         <div className='list'>
-        <h3 className='list__title'>NEXT VIDEOS</h3>
-        {this.state.details.map((video) =>  { 
-              if (video.id !== this.props.routeId) {
-                  return (
-                    <div className='list__item' key={video.id}>
-            
-                      <Link to= {`/${video.id}`} >
+          <h3 className='list__title'>NEXT VIDEOS</h3>
+          {this.state.details.map((video) =>  { 
+            if (video.id !== this.props.routeId) {
+                return (
+                  <div className='list__item' key={video.id}>
+                    <Link to= {`/${video.id}`} >
                       <div className='list__image'>
-                         <img className='list__image__item' src={video.image} alt={video.title} />
+                        <img className='list__image__item' src={video.image} alt={video.title} />
                       </div>
-                      </Link>
-                      <div className='list__item__info'>
-                        <p className='list__item__info--bold'>{video.title}</p>
-                        <p>{video.channel}</p>
-                      </div>
-                      
+                    </Link>
+                    <div className='list__item__info'>
+                      <p className='list__item__info--bold'>{video.title}</p>
+                      <p>{video.channel}</p>
                     </div>
-                  )
-              }}
-        )}
-    </div>
-    )
+                  </div>
+                )
+            }
+          }
+          )}
+        </div>
+      )
     }
    
 }

@@ -8,22 +8,21 @@ import Homepage from './Pages/Homepage/Homepage';
 
 class App extends React.Component {
 
-render(){
-  return (
-     <BrowserRouter>
-      <div className="App">
-        <Header />
-        <Switch>
-          <Route path='/'exact component={Homepage} />
-          <Route path='/upload' exact component={Upload} />
-          <Route path='/:id' component={Videopage}/>
-        </Switch>
-      </div>
+  render(){
+    return (
+      <BrowserRouter>
+        <div className="App">
+          <Header />
+          <Switch>
+            <Route path='/'exact component={Homepage} />
+            <Route path='/upload' exact component={Upload} />
+            <Route path='/:id' component={Videopage}/>
+          </Switch>
+        </div>
       </BrowserRouter>
-    
-  );
-}
- 
+      
+    );
+  } 
 }
 
 export default App;

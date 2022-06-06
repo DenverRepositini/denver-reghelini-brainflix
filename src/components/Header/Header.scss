@@ -16,6 +16,7 @@ body{
     }
 
     @include desktop{
+        padding: 20px 100px;
         column-gap: 16px;
     }
 }
@@ -115,13 +116,12 @@ body{
         display: flex;
         flex: 33;
         justify-content: space-around;
-         padding-left: 10px;
+        padding-left: 10px;
     }
 
     @include desktop {
         flex: 28;
         justify-content: flex-start;
-        column-gap: 40px;
     }
 
     

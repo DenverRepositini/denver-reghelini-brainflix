@@ -6,11 +6,19 @@
     padding: 0 24px;
     border-top: .0625rem solid #e1e1e1;
 
+    @include desktop{
+        padding-right: 0;
+    }
+
     &__item {
         display: flex;
         border-bottom: .0625rem solid #e1e1e1;
         padding: 1.5rem 0;
         padding-bottom: 0;
+
+        @include desktop{
+            padding-right: 24px;
+        }
     }
 
     &__image {
