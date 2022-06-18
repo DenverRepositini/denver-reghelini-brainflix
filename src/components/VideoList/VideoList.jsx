@@ -27,24 +27,28 @@ class VideoList extends React.Component {
       return(
         <div className='list'>
           <h3 className='list__title'>NEXT VIDEOS</h3>
+          <ul>
           {this.state.details.map((video) =>  { 
             if (video.id !== this.props.routeId) {
                 return (
-                  <div className='list__item' key={video.id}>
+                  <li key={video.id}>
                     <Link to= {`/${video.id}`} >
-                      <div className='list__image'>
-                        <img className='list__image__item' src={video.image} alt={video.title} />
+                      <div className='list__item' >
+                          <div className='list__image'>
+                            <img className='list__image__item' src={video.image} alt={video.title} />
+                          </div>
+                        <div className='list__item__info'>
+                          <p className='list__item__info--bold'>{video.title}</p>
+                          <p>{video.channel}</p>
+                        </div>
                       </div>
                     </Link>
-                    <div className='list__item__info'>
-                      <p className='list__item__info--bold'>{video.title}</p>
-                      <p>{video.channel}</p>
-                    </div>
-                  </div>
-                )
+                  </li>
+                );  
             }
           }
           )}
+          </ul>
         </div>
       )
     }
