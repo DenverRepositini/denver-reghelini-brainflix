@@ -7,11 +7,12 @@ import play from '../../assets/Icons/play.svg'
 
 const Video= (props) => { 
     // Rx props from Videopage state
+    let apikey = props.data.video + '?api_key=string'
     return(
         <>
             <div className='container'>
-                <video className='media' poster={props.data.image} src=""></video>        
-                <img className='control__play' src={play}/>          
+                <video className='media' controls poster={props.data.image} src={apikey} ></video>        
+                {/* <img className='control__play' src={play}/>           */}
             </div> 
             <div className='video-details'>
                 <div className='video-details__one'>
