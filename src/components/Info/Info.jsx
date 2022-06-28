@@ -2,15 +2,13 @@
 import './Info.scss'
 import views from '../../assets/Icons/views.svg'
 import likes from '../../assets/Icons/likes.svg'
-
+import formatDate from '../../utility'
 
 const Info= (props) => { 
-
     const details = props.videoDescription
-
     return(
         <section>
-                <VideoInfo
+            <VideoInfo
                 title={details.title}
                 channel={details.channel}
                 date={details.timestamp}
@@ -18,23 +16,14 @@ const Info= (props) => {
                 likes={details.likes}
                 description={details.description}
                 comments={details.comments}
-                 />
-                 
+            />
         </section>
     )
 }
 
 
 const VideoInfo = (props) => {
-
-    let today = new Date(props.date);
-
-    let month = today.getMonth() + 1;
-    let year = today.getFullYear();
-    let day = today.getDate();
-
-    let formattedDate = month + '/' + day + '/' + year
-
+    let formattedDate = formatDate(props.date)
     return (
         <div className='video-info'>
             <div className='title'>

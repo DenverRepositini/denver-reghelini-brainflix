@@ -4,7 +4,6 @@ import './App.scss';
 import Header from './components/Header/Header';
 import Videopage from './Pages/Video/Videopage';
 import Upload from './Pages/Upload/Upload';
-import Homepage from './Pages/Homepage/Homepage';
 
 class App extends React.Component {
 
@@ -14,7 +13,7 @@ class App extends React.Component {
         <div className="App">
           <Header />
           <Switch>
-            <Route path='/'exact component={Homepage} />
+            <Route path='/'exact component={Videopage} />
             <Route path='/upload' exact component={Upload} />
             <Route path='/:id' component={Videopage}/>
           </Switch>

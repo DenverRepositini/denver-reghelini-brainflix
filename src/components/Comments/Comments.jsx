@@ -1,7 +1,7 @@
 import React from 'react'
 import './Comments.scss'
 import likes from '../../assets/Icons/likes.svg'
-
+import formatDate from '../../utility'
 
 
 const Comments = (props) => {
@@ -9,14 +9,7 @@ const Comments = (props) => {
         <>
             <ul className='comments-list'>
                 {props.commentsList.map(comments => {
-                    let today = new Date(comments.timestamp);
-
-                    let month = today.getMonth() + 1;
-                    let year = today.getFullYear();
-                    let day = today.getDate();
-                
-                    let formattedDate = month + '/' + day + '/' + year
-
+                    let formattedDate = formatDate(comments.timestamp);
                     return (
                     <li key={comments.name} className="comments-list__item">
                         <div className='comments-list__image'></div>

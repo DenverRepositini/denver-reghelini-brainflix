@@ -1,5 +1,14 @@
 @use '../../styles/partials/media' as *;
 
+.container{
+    position: relative;
+}
+
+video{
+    max-height: 80vh;
+    max-width: 80vw;
+}
+
 .video-details{
     @include desktop{
          display: flex;
@@ -15,4 +24,16 @@
         flex: 3;
     }
    
+}
+
+.control{
+
+    &__play{
+        position: absolute;
+        left: 8vw;
+        padding: 10px 20px;
+        bottom: 18px;
+        border-radius: 5px;
+        background-color: #323232;
+    }
 }

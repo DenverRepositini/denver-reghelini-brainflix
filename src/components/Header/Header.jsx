@@ -8,15 +8,19 @@ const Header = () => {
     return (
         <div className="header">
             <div className='logo'>
-               <Link to='/'><img className='logo__image' src= {logo} alt="" /></Link>
+               <Link to='/'><img className='logo__image' src= {logo} alt=""/></Link>
             </div>
             <div className='search'>
-                <input type="search" className='search__input' placeholder='Search' />
-                <img src={icon} className='search__icon' alt="" />
+                <input type="search" className='search__input' placeholder='Search'/>
+                <img src={icon} className='search__icon' alt=""/>
             </div>
             <div className='button'>
-                <Link className='button__link' to='/upload'><button className='button__item'>UPLOAD</button></Link>
-                <img src={icon} className='search__icon--tablet' alt="" />
+                <Link className='button__item' to='/upload'>
+                    {/* <div className='button__item'> */}
+                        UPLOAD
+                        {/* </div> */}
+                        </Link>
+                <img src={icon} className='search__icon--tablet' alt=""/>
             </div>
         </div>
     );
